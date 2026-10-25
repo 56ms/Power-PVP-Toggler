@@ -1,0 +1,18 @@
+name: Strawberry_PVP_plugin
+version: '${version}'
+author: Power16
+main: com.power16.strawberry_PVP_plugin.Strawberry_PVP_plugin
+api-version: '26.3'
+load: POSTWORLD
+description: A plugin that enables PvP combat in Minecraft!
+
+commands:
+  pvp:
+    description: Toggle PvP combat for yourself.
+    usage: /pvp <on|off>
+    permission: strawberry_pvp_plugin.command.pvp
+
+permissions:
+  strawberry_pvp_plugin.command.pvp:
+    description: Allows players to toggle PvP combat.
+    default: true
