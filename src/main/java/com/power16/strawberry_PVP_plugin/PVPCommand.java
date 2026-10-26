@@ -1,5 +1,6 @@
 package com.power16.strawberry_PVP_plugin;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -35,9 +36,11 @@ public class PVPCommand implements CommandExecutor, TabCompleter {
         switch (args[0].toLowerCase(Locale.ROOT)) {
                 case "on" -> {
                     plugin.setPvpEnabled(p, true);
+                    p.sendMessage(ChatColor.GREEN + "PVP has been enabled.");
                 }
                 case "off" -> {
                     plugin.setPvpEnabled(p, false);
+                    p.sendMessage(ChatColor.RED + "PVP has been disabled.");
                 }
                 default -> {
                 return false;
